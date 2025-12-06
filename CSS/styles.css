@@ -49,8 +49,17 @@ main {
     flex: 1 1 250px;
     margin-top: 130px;
 }
-.personal-info ul, .personal-info h3 {
+.personal-info ul, .personal-info h3, table {
     width: 170px
+}
+table{
+    border-collapse: collapse;
+}
+tr:nth-child(odd){
+    background-color: white;
+}
+tr:nth-child(even){
+    background-color: lightgray;
 }
 h2{
     margin: 15px 0;
