@@ -38,7 +38,7 @@ img:hover{
 }
 main {
     display: flex;
-    min-height: calc(100vh - 85px);
+    min-height: calc(100vh - 115px);
     width: 100%;
 }
 
@@ -90,4 +90,12 @@ h5{
 }
 span{
     font-weight: normal;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    height: 30px;
 }
