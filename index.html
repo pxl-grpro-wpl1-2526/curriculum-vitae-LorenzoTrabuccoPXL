@@ -4,52 +4,36 @@
     <meta charset="UTF-8">
     <title>Curriculum vitae</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/2af2af06f2.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="banner">
-    <div>
-        <a href="https://www.linkedin.com/in/lorenzo-trabucco-65013033b/" target="_blank"><img src="images/1000005918.jpg" height="200px" alt="profielfoto" class="photo"></a>
+    <div class="foto">
+        <a href="https://www.linkedin.com/in/lorenzo-trabucco-65013033b/" target="_blank">
+            <img src="images/1000005918.jpg" height="200px" alt="profielfoto" class="photo">
+        </a>
     </div>
     <h1 class="naam">Lorenzo Trabucco</h1>
 </header>
+<nav>
+    <ul class="navbar">
+        <li><a href="#werkervaring">Werkervaring</a></li>
+        <li><a href="#vaardigheden">vaardigheden</a></li>
+        <li><a href="#diplomas">diplomas</a></li>
+        <li><a href="#talen">talen</a></li>
+    </ul>
+</nav>
 <main>
     <section class="personal-info">
         <h3>CONTACT</h3>
         <ul>
-            <li>Herebaan Oost 157 bus 3</li>
-            <li>0496/93.22.11</li>
-            <li>lorenzotrab@hotmail.com</li>
+            <li><i class="fa-solid fa-house"></i> Herebaan Oost 157 bus 3</li>
+            <li><i class="fa-solid fa-phone-volume"></i> 0496/93.22.11</li>
+            <li><i class="fa-solid fa-at"></i> lorenzotrab@hotmail.com</li>
         </ul>
-        <h3>VAARDIGHEDEN</h3>
-        <ul>
-            <li>C#, HTML, CSS, Java, SQL</li>
-            <li>Git / GitHub</li>
-            <li>Scrum / Agile</li>
-            <li>Samenwerking</li>
-            <li>Probleemoplossend en analytisch denken</li>
-        </ul>
-        <h3>DIPLOMA'S</h3>
-        <ul>
-            <li>Technisch bouwkunde</li>
-            <li>Graduaat programmeren (ongoing)</li>
-        </ul>
-        <h3>TALEN</h3>
-            <table class="desktop-talen">
-                <tr>
-                    <td>Nederlands:</td>
-                    <td>goed</td>
-                </tr>
-                <tr>
-                    <td>Engels:</td>
-                    <td>gemiddeld</td>
-                </tr>
-            </table>
-        <ul class="mobile-talen">
-            <li><span>Nederlands:</span><span>goed</span></li>
-            <li><span>Engels:</span><span>gemiddeld</span></li>
 
-        </ul>
+
     </section>
     <section class="content">
         <h2>Introductie</h2>
@@ -58,52 +42,70 @@
             mindset. Mijn doel is om te leren van ervaren professionals en een waardevolle bijdrage te leveren aan het
             team.
         </p>
-        <h2>Werkervaring</h2>
-        <div class="werkervaring">
+        <div id="werkervaring">
+            <h2>Werkervaring</h2>
             <article>
                 <h4>Arbeider: ECHO nv. <span>(2007 - 2013)</span></h4>
-                <h5> Draadtrekker en machienist</h5>
-                <ul>
-                    <li>Voorbereiden van productiebanen</li>
-                    <li>Afstellen, bedienen en opvolgen van productiemachines</li>
-                    <li>Tijdig oplossen van operationele storingen om stilstand te vermijden</li>
-                    <li>uitvoeren van kwaliteitscontroles</li>
-                </ul>
+                <h5> Draadtrekker en machinist</h5>
+                <p>Voorbereiden van productiebanen</p>
+                <p>Afstellen, bedienen en opvolgen van productiemachines</p>
+                <p>Tijdig oplossen van operationele storingen om stilstand te vermijden</p>
+                <p>Uitvoeren van kwaliteitscontroles</p>
             </article>
             <article>
                 <h4>Zelfstandige: BVBA Trabucco <span>(2013 - 2016)</span></h4>
                 <h5>Allround bouwvakker</h5>
-                <ul>
-                    <li>Uitvoeren van metselwerken voor diverse bouwprojecten</li>
-                    <li>Uitvoeren van dakwerken</li>
-                    <li>Interpreteren van bouwplannen</li>
-                </ul>
+                <p>Uitvoeren van metselwerken voor diverse bouwprojecten</p>
+                <p>Uitvoeren van dakwerken</p>
+                <p>Interpreteren van bouwplannen</p>
             </article>
             <article>
                 <h4>Magazijnier <span>(2016 - 2019)</span></h4>
                 <h5>Orderpicker en logistiek medewerker</h5>
-                <ul>
-                    <li>Handmatig en machinaal orderpicken</li>
-                    <li>Inpakken, labelen en verzendklaar maken van goederen</li>
-                </ul>
+                <p>Handmatig en machinaal orderpicken</p>
+                <p>Inpakken, labelen en verzendklaar maken van goederen</p>
             </article>
             <article>
                 <h4>Bediende verkoper: COLRUYT GROUP NV <span>(2020 - 2025)</span></h4>
                 <h5>Winkelmedewerker</h5>
-                <ul>
-                    <li>Aanvullen van rekken en bewaken van winkelpresentatie</li>
-                    <li>Vlotte en klantvriendelijke bediening aan de kassa</li>
-                    <li>Klanten adviseren over producten en eventuele problemen oplossen</li>
-                </ul>
+                <p>Aanvullen van rekken en bewaken van winkelpresentatie</p>
+                <p>Vlotte en klantvriendelijke bediening aan de kassa</p>
+                <p>Klanten adviseren over producten en eventuele problemen oplossen</p>
             </article>
+        </div>
+        <div>
+            <h2 id="vaardigheden">VAARDIGHEDEN</h2>
+            <p>C#, HTML, CSS, Java, SQL</p>
+            <p>Git / GitHub</p>
+            <p>Scrum / Agile</p>
+            <p>Samenwerking</p>
+            <p>Probleemoplossend en analytisch denken</p>
+        </div>
+        <div>
+            <h2 id="diplomas">DIPLOMA'S</h2>
+            <p>Technisch bouwkunde</p>
+            <p>Graduaat programmeren (ongoing)</p>
+        </div>
+        <div>
+            <h2 id="talen">TALEN</h2>
+            <table>
+                <tr>
+                    <td>Nederlands:</td>
+                    <td>goed</td>
+                </tr>
+                <tr>
+                    <td>Engels:</td>
+                    <td>matig</td>
+                </tr>
+            </table>
         </div>
     </section>
 </main>
 <footer>
 <span>Trabucco Lorenzo
 1PROe</span>
-<span>Opdracht curriculum vitae</span>
-<a class="button" href="#">Terug naar boven</a>
+    <span>Opdracht curriculum vitae</span>
+    <a class="button" href="#">Terug naar boven</a>
 </footer>
 </body>
 </html>
