@@ -84,7 +84,7 @@ main {
     align-items: center;
     flex: 1 0 250px;
     margin-top: 150px;
-    min-width: 330px;
+    min-width: 230px;
 }
 
 ul {
@@ -96,8 +96,36 @@ li {
     list-style: none;
 }
 
-.personal-info ul, .personal-info h3, table {
+.personal-info ul, .personal-info h3 {
     width: 170px
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article img {
+    width: 200px;
+    margin-top: 40px;
+    display: none;
+}
+
+.draadtrekker:hover + .welfsels {
+    display: block;
+}
+
+.metser:hover + .metserfoto {
+    display: block;
+}
+
+.magazijnier:hover + .stapelaar {
+    display: block;
+}
+
+.bediende:hover + .winkelmedewerker {
+    display: block;
 }
 
 table {
@@ -137,6 +165,7 @@ h5 {
     margin: 0 0 20px 0;
     font-size: 18px;
 }
+
 
 .content {
     margin-top: 8px;
@@ -204,6 +233,26 @@ footer {
         padding: 0;
     }
 
+    .draadtrekker:hover + .welfsels {
+        display: none;
+    }
+
+    .metser:hover + .metserfoto {
+        display: none;
+    }
+
+    .magazijnier:hover + .stapelaar {
+        display: none;
+    }
+
+    .bediende:hover + .winkelmedewerker {
+        display: none;
+    }
+
+    .content {
+        padding: 20px 30px;
+    }
+
     p {
         width: auto;
     }
@@ -218,9 +267,11 @@ footer {
     img {
         margin-top: 20px;
     }
-    .navbar{
+
+    .navbar {
         flex-wrap: wrap;
     }
+
     h1 {
         text-align: center;
     }
@@ -236,6 +287,10 @@ footer {
         margin-left: 0;
     }
 
+    ul {
+        min-width: 0;
+    }
+
     .personal-info ul li {
         margin-left: 5px;
         word-wrap: normal;
@@ -246,7 +301,10 @@ footer {
     }
 
     footer {
-        height: 60px;
-        padding: 5px
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5px;
+        height: 100px;
     }
+
 }
