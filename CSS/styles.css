@@ -100,6 +100,10 @@ li {
     width: 170px
 }
 
+h2:hover {
+    color:  darkblue;
+}
+
 article {
     display: flex;
     justify-content: space-between;
@@ -112,19 +116,19 @@ article img {
     display: none;
 }
 
-.draadtrekker:hover + .welfsels {
+.div1:hover + .foto1 {
     display: block;
 }
 
-.metser:hover + .metserfoto {
+.div2:hover + .foto2 {
     display: block;
 }
 
-.magazijnier:hover + .stapelaar {
+.div3:hover + .foto3 {
     display: block;
 }
 
-.bediende:hover + .winkelmedewerker {
+.div4:hover + .foto4 {
     display: block;
 }
 
@@ -162,8 +166,13 @@ h4 {
 }
 
 h5 {
+    display: inline-block;
     margin: 0 0 20px 0;
     font-size: 18px;
+}
+
+h5:hover {
+    transform: scale(1.05);
 }
 
 
@@ -212,6 +221,24 @@ footer {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
+@media screen and (max-width: 1210px) {
+    .draadtrekker:hover + .foto1 {
+        display: none;
+    }
+
+    .metser:hover + .foto2 {
+        display: none;
+    }
+
+    .magazijnier:hover + .foto3 {
+        display: none;
+    }
+
+    .bediende:hover + .foto4 {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .navbar {
         margin-left: 0;
@@ -231,22 +258,6 @@ footer {
         justify-content: center;
         align-items: center;
         padding: 0;
-    }
-
-    .draadtrekker:hover + .welfsels {
-        display: none;
-    }
-
-    .metser:hover + .metserfoto {
-        display: none;
-    }
-
-    .magazijnier:hover + .stapelaar {
-        display: none;
-    }
-
-    .bediende:hover + .winkelmedewerker {
-        display: none;
     }
 
     .content {
@@ -306,5 +317,4 @@ footer {
         padding: 5px;
         height: 100px;
     }
-
 }
