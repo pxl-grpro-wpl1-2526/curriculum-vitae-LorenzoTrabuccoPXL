@@ -5,24 +5,26 @@
 }
 
 body {
-    background-color: #bdefff;
+    background-color: #404040;
     font-family: Arial, Roboto, sans-serif;
 }
 
 .navbar {
     display: flex;
     justify-content: space-around;
-    margin-left: 22%;
+    margin: auto 30%;
 }
 
 .navbar li {
     text-align: center;
     width: 100%;
-    border-bottom: 5px solid #bdefff;
+    border-bottom: 5px solid #404040;
+    list-style: none;
 }
 
 .navbar li a {
     text-decoration: none;
+    color: white;
 }
 
 .navbar li:hover {
@@ -76,15 +78,28 @@ img:hover {
 main {
     display: flex;
     width: 100%;
+    position: relative;
 }
 
 .personal-info {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1 0 250px;
     margin-top: 150px;
     min-width: 230px;
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 20px;
+}
+
+.personal-info ul li {
+    list-style: none;
+    padding-top: 20px;
 }
 
 ul {
@@ -93,7 +108,6 @@ ul {
 
 li {
     padding: 5px 0;
-    list-style: none;
 }
 
 .personal-info ul, .personal-info h3 {
@@ -101,13 +115,20 @@ li {
 }
 
 h2:hover {
-    color:  darkblue;
+    color: darkblue;
+}
+
+section {
+    border-bottom: 2px solid darkblue;
+    padding-bottom: 20px;
+
 }
 
 article {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 900px;
 }
 
 article img {
@@ -141,23 +162,24 @@ td {
 }
 
 tr:nth-child(odd) {
-    background-color: #0e8db5;
+    background-color: #05054fc4;
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #bdefff;
+    background-color: #404040;
+    color: white;
 }
 
 h2 {
     margin: 25px 0;
     font-size: 30px;
-    color: #05054fc4;
+    color: darkblue;
 }
 
 h3 {
     margin: 25px 0;
-    color: #05054fc4;
+    color: darkblue;
 }
 
 h4 {
@@ -200,6 +222,9 @@ p {
 span {
     font-weight: normal;
 }
+.contentLists ul{
+    margin-left: 20px;
+}
 
 footer {
     display: flex;
@@ -222,21 +247,22 @@ footer {
 }
 
 @media screen and (max-width: 1210px) {
-    .draadtrekker:hover + .foto1 {
+    .div1:hover + .foto1 {
         display: none;
     }
 
-    .metser:hover + .foto2 {
+    .div2:hover + .foto2 {
         display: none;
     }
 
-    .magazijnier:hover + .foto3 {
+    .div3:hover + .foto3 {
         display: none;
     }
 
-    .bediende:hover + .foto4 {
+    .div4:hover + .foto4 {
         display: none;
     }
+
 }
 
 @media screen and (max-width: 992px) {
