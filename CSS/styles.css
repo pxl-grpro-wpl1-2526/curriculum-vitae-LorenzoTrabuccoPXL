@@ -5,10 +5,19 @@
 }
 
 body {
-    background-color: #404040;
+    background-color: #39899b;
     font-family: Arial, Roboto, sans-serif;
+    max-width: 100vw;
 }
 
+nav{
+    background-color: #39899b;
+    height: 29px;
+    padding-bottom:  20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -18,30 +27,45 @@ body {
 .navbar li {
     text-align: center;
     width: 100%;
-    border-bottom: 5px solid #404040;
     list-style: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .navbar li a {
+    display: block;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: white;
 }
 
+.navbar li::before {
+    content: '';
+    position: absolute;
+    top: -110%;
+    left: -80%;
+    width: 250%;
+    height: 340%;
+    background: linear-gradient(0deg, transparent, transparent 30%, rgba(0,255,255,0.3));
+    transform: rotate(-25deg);
+    transition: all 0.5s ease;
+}
 .navbar li:hover {
-    border-bottom: 5px solid #05054fc4;
-    transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+.navbar li:hover::before {
+    transform: rotate(-25deg) translateY(100%);
 }
 
 .banner {
-    background-color: #05054fc4;
+    background: #05054FC4;
+    background: linear-gradient(90deg, rgba(5, 5, 79, 1) 0%, rgba(5, 5, 79, 1) 0%, rgba(5, 5, 79, 1) 0%, rgba(5, 5, 79, 1) 0%, rgba(57, 137, 155, 1) 100%);
     display: flex;
     align-items: center;
-    border-bottom: 2px solid white;
-    box-shadow: 0 5px #05054fc4;
-    margin-bottom: 5px;
+    border-bottom: 2px solid #e0edf1;
     height: 80px;
-    width: 100vw;
+    width: 100%;
 }
 
 .banner .foto {
@@ -49,7 +73,7 @@ body {
     justify-content: center;
     flex: 1 1 250px;
     z-index: 2;
-    min-width: 330px;
+    min-width: 230px;
 }
 
 img {
@@ -64,7 +88,7 @@ img:hover {
 .banner .naam {
     display: flex;
     justify-content: start;
-    color: white;
+    color: #e0edf1;
     flex: 7 1 250px;
     padding-left: 80px;
     padding-right: 80px;
@@ -82,7 +106,7 @@ main {
 }
 
 .personal-info {
-    color: white;
+    color: #e0edf1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,28 +153,43 @@ article {
     justify-content: space-between;
     align-items: center;
     max-width: 900px;
+    overflow: hidden;
 }
 
 article img {
+    position: relative;
     width: 200px;
     margin-top: 40px;
     display: none;
 }
 
+@keyframes moveimage {
+    from {
+        left: 200px;
+    }
+    to {
+        left: 0;
+    }
+}
+
 .div1:hover + .foto1 {
     display: block;
+    animation: moveimage 1s ease-in-out;
 }
 
 .div2:hover + .foto2 {
     display: block;
+    animation: moveimage 1s ease-in-out;
 }
 
 .div3:hover + .foto3 {
     display: block;
+    animation: moveimage 1s ease-in-out;
 }
 
 .div4:hover + .foto4 {
     display: block;
+    animation: moveimage 1s ease-in-out;
 }
 
 table {
@@ -158,23 +197,24 @@ table {
 }
 
 td {
-    padding: 5px;
+    padding: 10px 15px;
 }
 
 tr:nth-child(odd) {
     background-color: #05054fc4;
-    color: white;
+    color: #e0edf1;
 }
 
 tr:nth-child(even) {
     background-color: #404040;
-    color: white;
+    color: #e0edf1;
 }
 
 h2 {
     margin: 25px 0;
     font-size: 30px;
     color: darkblue;
+    scroll-margin-top: 80px;
 }
 
 h3 {
@@ -193,15 +233,10 @@ h5 {
     font-size: 18px;
 }
 
-h5:hover {
-    transform: scale(1.05);
-}
-
-
 .content {
     margin-top: 8px;
     flex: 7 1 250px;
-    background-color: white;
+    background-color: #e0edf1;
     flex-wrap: wrap;
     padding: 20px 80px;
 }
@@ -222,7 +257,8 @@ p {
 span {
     font-weight: normal;
 }
-.contentLists ul{
+
+.contentLists ul {
     margin-left: 20px;
 }
 
@@ -234,11 +270,11 @@ footer {
     padding: 20px 50px;
     height: 30px;
     background-color: #05054fc4;
-    color: white;
+    color: #e0edf1;
 }
 
 .button {
-    color: white;
+    color: #e0edf1;
 }
 
 .button:hover {
@@ -247,6 +283,11 @@ footer {
 }
 
 @media screen and (max-width: 1210px) {
+    .navbar {
+        margin: auto;
+    }
+
+
     .div1:hover + .foto1 {
         display: none;
     }
@@ -297,6 +338,9 @@ footer {
 
 @media screen and (max-width: 576px) {
 
+    *{
+        word-wrap: break-word;
+    }
     .banner .foto {
         min-width: 0;
     }
@@ -305,8 +349,16 @@ footer {
         margin-top: 20px;
     }
 
+    nav{
+        position: relative;
+    }
+
     .navbar {
         flex-wrap: wrap;
+    }
+
+    .navbar li {
+        width: 100px;
     }
 
     h1 {
